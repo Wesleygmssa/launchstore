@@ -18,7 +18,7 @@
 <p align="center">
     <br/>
   <br/>
-  <img src="01.gif" >
+  <img src="02.gif" >
   <br/>
   <br/>
 </p>
