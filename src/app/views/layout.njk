@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        {% block head %}
+            <title>Launchstore</title>
+        {% endblock %}
+     <!-- icones  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/script.js">
+    
+</head>
+
+<body>
+
+ {% include "parts/header.njk" %} 
+ 
+ {% block content %} {% endblock %}
+
+ {% include "parts/footer.njk" %} 
+
+</body>
+</html>
