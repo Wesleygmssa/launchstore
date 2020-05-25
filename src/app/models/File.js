@@ -1,5 +1,6 @@
 const db = require('../../config/db');
 const fs = require('fs');
+
 module.exports = {
   all() {
     return db.query(`

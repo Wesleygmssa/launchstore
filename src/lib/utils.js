@@ -6,25 +6,18 @@ module.exports = {
     
     const date = new Date(timestamp) 
 
-    //YYYY
-    const year = date.getUTCFullYear()
-
-    //mm
-    const month = `0${date.getUTCMonth() + 1}`.slice(-2) // 0 à 11 , com + 1 == 0 à  12
-
-    //DD
-    const day = `0${date.getUTCDate()}`.slice(-2);
-    
+    const year = date.getFullYear()
+    const month = `0${date.getMonth() + 1}`.slice(-2) // 0 à 11 , com + 1 == 0 à  12
+    const day = `0${date.getDate()}`.slice(-2);
     const hour = date.getHours();
-    const minutos = date.getMinutes();
+    const minutes = date.getMinutes();
 
-    // return yyy-mm-dd
     return {
       day,
       month,
       year,
       hour,
-      minutos,
+      minutes,
       iso: `${year}-${month}-${day}`,
       birthDay: `${day}/${month}/${year}`,
       format: `${day}-${year}-${month}`
@@ -32,9 +25,6 @@ module.exports = {
 
   },
 
-
-
-  
   formatPrice(price){
     return new Intl.NumberFormat('pt-BR', {
       style: 'currency',
