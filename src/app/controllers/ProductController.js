@@ -51,7 +51,7 @@ module.exports = {
         const product = results.rows[0];// recendo o objeto ID
         if (!product) return res.send("product not found")// se não existir o produto
 
-        const { day, hour, minutes, month } = date(product.update_at);
+        const { day, hour, minutes, month } = date(product.updated_at);
         product.published = {//um objeto
             day: `${day}/${month}`,
             hour: `${hour}h${minutes}`,

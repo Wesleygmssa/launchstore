@@ -8,8 +8,8 @@ CREATE TABLE "products" (
   "price" int NOT NULL,
   "quantity" int DEFAULT 0,
   "status" int DEFAULT 1,
-  "creatd_at" timestamp DEFAULT 'now()',
-  "update_at" timestamp DEFAULT 'now()'
+  "created_at" timestamp DEFAULT 'now()',
+  "updated_at" timestamp DEFAULT 'now()'
 );
 
 CREATE TABLE "categories" (

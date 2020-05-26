@@ -323,6 +323,29 @@ opacity: 0;
 opacity: 1;
 }
 
+/* SHOP */
+
+.shop h2{
+    margin: 48px;
+    border: 1px solid red;
+
+}
+.shop .items {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+
+    gap: 32px;
+    border: 1px solid red;
+}
+.shop .product{
+    display: grid;
+    border: 1px solid red;
+}
+
+.shop .product .image{
+    padding-top: 56.25%;
+}
+
 
 
 
