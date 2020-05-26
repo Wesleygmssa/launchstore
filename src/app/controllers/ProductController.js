@@ -118,8 +118,8 @@ module.exports = {
 
     },
     async delete(req, res) {
-        let results = await File.find(req.body.id)
-        const files = results.rows
+        let results = await File.find(req.body.id)// encontrar um arquivo
+        const files = results.rows // passnado resultado em forma de array
         if (files) {
             const removeFilesPromise = files.map(file => File.delete(file.id))
 

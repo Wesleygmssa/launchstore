@@ -1,7 +1,11 @@
 const db = require('../../config/db')// pegando a exportação do banco de dados
 
 module.exports = {
-    
+    all(){
+        return db.query(`
+        SELECT * FROM products ORDER BY updated_at DESC
+        `)
+    },
     create(data) { // retornando para post
 
         const query = `  
