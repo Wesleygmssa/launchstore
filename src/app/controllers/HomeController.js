@@ -16,6 +16,7 @@ module.exports = {
             return files[0]; // retornando somente os caminhos
        }
 
+       //usando map e inserindo dados no objeto product 
        const productsPromise = products.map( async product =>{ // retorna uma array
            product.image = await getImage(product.id);// recebendi a imagem
            product.oldPrice = formatPrice(product.old_price);
@@ -24,8 +25,9 @@ module.exports = {
        }).filter((product, index) => index > 2 ? false : true);// se for falso pare. pegando só 3 produtos
 
 
-       const lastAdded = await Promise.all(productsPromise);
-      console.log(lastAdded)
+       const lastAdded = await Promise.all(productsPromise); // fazendo com q realmente seja executada
+      console.log(lastAdded);
+
        return res.render('home/index',{products:lastAdded});
     }
 
