@@ -19,9 +19,9 @@
     <br/>
   <br/>
   <img src="02.gif" >
-  <img src="03.gif" >
-  <img src="04.gif" >
-  <img src="05.gif" >
+  <img src="03.png" >
+  <img src="04.png" >
+  <img src="05.png" >
   <br/>
   <br/>
 </p>
