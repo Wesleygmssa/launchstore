@@ -11,14 +11,13 @@ routes.get('/',HomeController.index)
 
 
 routes.get('/products/create', ProductsControllers.create);//exibe formulario 
-routes.get('/products/:id', ProductsControllers.show)
-routes.get('/products/:id/edit', ProductsControllers.edit);
+routes.get('/products/:id', ProductsControllers.show) // exição do produto
+routes.get('/products/:id/edit', ProductsControllers.edit);// pagina editar
 
-routes.post('/products', multer.array("photos", 6),ProductsControllers.post); //create new
-routes.put('/products', multer.array("photos", 6), ProductsControllers.put);  //update
+routes.post('/products', multer.array("photos", 6),ProductsControllers.post); //camingo do formulario salvar
+routes.put('/products', multer.array("photos", 6), ProductsControllers.put);  //update formulario
 
-routes.delete('/products', ProductsControllers.delete);//delete
-
+routes.delete('/products', ProductsControllers.delete);//delete formualario usando mais como button no formulario
 
 //alias atalhos
 routes.get('/ads/create', function( req, res){
