@@ -491,19 +491,18 @@ opacity: 1;
 .shop .items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
-    border: 1px solid red;
     gap: 32px;
  
 }
 .shop .product{
     display: grid;
-    border: 1px solid red;
+
    
 }
 
 .shop .product .image{
     padding-top: 56.25%;
-    border: 1px solid red;
+ 
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -530,7 +529,7 @@ opacity: 1;
     font-size: 14px;
     color: #999;
     text-decoration: line-through;
-    border: 1px solid red;
+   
 
  
 }
@@ -542,7 +541,7 @@ opacity: 1;
     grid-template-columns: 200px 1fr;
     margin-top: 48px;
 
-    border: 1px solid red;
+   
 
 }
 
@@ -554,14 +553,14 @@ opacity: 1;
     color: #333;
     font-weight: bold;
 
-    border: 1px solid blue;
+
 }
 
 .search-products .header h2{
     font-size: 26px;
     text-transform: capitalize ; /* primeiras letras caixa alta */
     font-weight: bold;
-    border: 1px solid red;
+   
     margin-bottom: 8px;
 
 }
@@ -573,7 +572,7 @@ opacity: 1;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
-    border: 1px solid red;
+   
 }
 
 .search-products nav ul li{

@@ -31,7 +31,7 @@ module.exports = {
 
 
          const productsPromisse = results.rows.map(async product =>{
-            product.img =  await getImage(product.id)
+            product.image =  await getImage(product.id)
             product.oldPrice = formatPrice(product.old_price)
             product.price = formatPrice(product.price)
 
@@ -39,7 +39,6 @@ module.exports = {
          })
 
          const products = await Promise.all(productsPromisse)
-
          const search = {
             term: req.query.filter,
             total: products.length
