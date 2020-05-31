@@ -13,11 +13,11 @@ const SearchController = require('./app/controllers/SearchController');
 routes.get('/',HomeController.index)
 
 //Search
-routes.get('/products/search', SearchController.index);
+routes.get('/products/search', SearchController.index);//search for products
 
 //products
-routes.get('/products/create', ProductsControllers.create);//exibe formulario 
-routes.get('/products/:id', ProductsControllers.show) // exição do produto
+routes.get('/products/create', ProductsControllers.create);//display form
+routes.get('/products/:id', ProductsControllers.show) // product display
 routes.get('/products/:id/edit', ProductsControllers.edit);// pagina editar
 
 

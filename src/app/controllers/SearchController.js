@@ -6,10 +6,10 @@ module.exports = {
    async index(req, res) {
       try {
 
-       let results, params = {}
+       let results,
+        params = {}
 
          const { filter, category} = req.query
-
          if(!filter) return res.redirect('/');
 
          params.filter = filter
@@ -19,6 +19,7 @@ module.exports = {
             params.category = category
          }
 
+         console.log(params.category)
          results =  await Product.search(params)
 
          async function getImage(productID){
