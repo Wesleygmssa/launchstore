@@ -7,10 +7,12 @@
             </div>
         </a>
 
-
+        {# /products/search?filter=c #}
         <form class="search" action="/products/search">
-            <input type="text" name="filter" placeholder="Buscar por Produtos" {% if search.term %}
-                value="{{seach.term}}" {%endif%}>
+            <input type="text" name="filter" placeholder="Buscar por Produtos"
+             {% if search.term %}
+                value="{{seach.term}}"
+             {%endif%}>
 
         </form>
 

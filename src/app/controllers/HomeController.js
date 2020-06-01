@@ -28,7 +28,7 @@ module.exports = {
 
 
        const lastAdded = await Promise.all(productsPromise); // fazendo com q realmente seja executada
-       console.log(lastAdded);
+      //  console.log(lastAdded);
 
        return res.render('home/index',{products:lastAdded});
     }

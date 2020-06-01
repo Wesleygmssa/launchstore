@@ -18,10 +18,10 @@
 <p align="center">
     <br/>
   <br/>
+  <img src="06.png" >
+  <img src="07.png" >
+  <img src="08.png" >
   <img src="02.gif" >
-  <img src="03.png" >
-  <img src="04.png" >
-  <img src="05.png" >
   <br/>
   <br/>
 </p>
