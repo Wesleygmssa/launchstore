@@ -1,6 +1,7 @@
-{% macro products(name, classes, products) %}
+{% macro products(name, classes, products) %} {# como se fosse uma função, e roda sempre quando é chamada #}
 
  <section class="shop {{classes}}">
+ 
     {% if name %}
     <h2>{{name}}</h2>
     {% endif %}
@@ -22,6 +23,7 @@
 
             <a href="/products/{{product.id}}" class="button">Ver Produto</a>
         </div>
+
         {%endfor%}
     </div>
 </section>

@@ -23,11 +23,7 @@ routes.get('/products/:id/edit', ProductsControllers.edit);// pagina editar
 
 routes.post('/products', multer.array("photos", 6),ProductsControllers.post); //camingo do formulario salvar
 routes.put('/products', multer.array("photos", 6), ProductsControllers.put);  //update formulario
-
 routes.delete('/products', ProductsControllers.delete);//delete formualario usando mais como button no formulario
-
-
-
 
 
 //alias atalhos

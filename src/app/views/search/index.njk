@@ -1,26 +1,31 @@
 {% extends 'layout.njk' %}
-{% import "parts/section-products.njk" as section %}
+{% import "parts/section-products.njk" as section %} {# 02 import o macro #}
 
 {% block content %}
 <section class="search-products container">
 
     <aside>
         <div class="header">
-            <h2>{{search.term}}</h2>
+            <h2>{{search.term}}</h2> {# termo da pesquisa #}
             <p> {{search.total}} encontrados</p>
         </div>
         <nav class="categories">
+
             <h4> Categorias </h4>
             <ul>
-            {%for category in categories%}
-                <li><a href="/products/search?filter={{search.term}}&category={{category.id}}">{{search.name}}</a></li>
-            {%endfor%}
+            {% for category in categories %} {# para cada category #}
+                <li><a href="/products/search?filter={{search.term}}&category={{category.id}}">{{category.name}}</a></li>
+            {% endfor %}
             </ul>
            
         </nav>
     </aside>
 
-    {{section.products('', 'searched', products)}}
+    {{section.products('', 'searched', products)}} 
+     {# 02 chamando function #}
+     {# chamando a função, passando os paramentros #}
+     {# passando nome, classes, e products que já estava recebendo #}
+
 </section>
 
 {% endblock content %}

@@ -84,29 +84,28 @@ module.exports = {
         return  db.query(`SELECT * FROM files WHERE product_id = $1`,[id] );
        
     },
-    search(params){
-        const {filter, category} = params
+    search(params){ // função procurar no banco de dados 
+        const {filter, category} = params // destruturação de objeto // recebendo dados para verificação
 
-        let query = "",
-           filterQuery = "WHERE"
+        let query = "",// vazia
+           filterQuery = "WHERE" //ONDE
 
-           if(category){
-              filterQuery = `${filterQuery}`
-              products.category_id = `${category_id}`
-              AND
+           if(category){ // se tiver categoria
+              filterQuery = `${filterQuery} /* WHERE */
+              products.category_id = ${category}
+              AND`
            }
-
-           filterQuery = `
-            ${filterQuery} 
-            products.name ilike '%${filter}%'
-            OR products.description ilike '%${filter}%'
+           
+           filterQuery = //ONDE // consulta de filtro // sem categoria
            `
-
+            ${filterQuery} 
+            products.name ilike '%${filter}%'  /* filtrar por nome, mostre o produto */
+            OR products.description ilike '%${filter}%'  /* filtrar por description */
+           `
         //    let total_query = `(
         //     SELECT count(*) FROM products
         //     )AS total
         //    `
-
            query =`
             SELECT products.*,
             categories.name AS category_name
@@ -114,7 +113,6 @@ module.exports = {
             LEFT JOIN categories ON (categories.id = products.category_id )
             ${filterQuery}
            `
-
            return db.query(query)
            //where products.category_id = 1
            //and products.name ilike ...
